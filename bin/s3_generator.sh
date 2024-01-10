@@ -36,7 +36,7 @@ if [ "$1" == "start" ]; then
     python3 -m venv "$CURRENT_DIR/venv"
     source "$CURRENT_DIR/venv/bin/activate" && echo "Virtual environment is active."
 
-    # Run S3 messages generator
+    # Run Main Fire Department Job
     pip install -r "$CURRENT_DIR/../app/src/requirements.txt"
     python "$CURRENT_DIR/../app/src/app.py"
 
