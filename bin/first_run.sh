@@ -16,21 +16,6 @@ CURRENT_DIR="$(pwd)"
 # Start block
 if [ "$1" == "start" ]; then
 
-
-    echo "Starting Generator."
-    # Install and Activate raw virtual environment
-    python3 -m venv "$CURRENT_DIR/venv"
-    source "$CURRENT_DIR/venv/bin/activate" && echo "Virtual environment is active."
-
-    # Run S3 messages generator
-    pip install -r "$CURRENT_DIR/../app_s3_generator/requirements.txt"
-    python "$CURRENT_DIR/../app_s3_generator/generator.py"
-
-    # Deactivate & remove virtual environment
-    deactivate && echo "Virtual environment is not active."
-    rm -rf "$CURRENT_DIR/venv"
-
-
     echo "Starting Fire Departament JOB"
     # Install and Activate raw virtual environment
     python3 -m venv "$CURRENT_DIR/venv"
